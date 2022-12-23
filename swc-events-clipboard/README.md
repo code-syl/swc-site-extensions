@@ -4,9 +4,12 @@
 This user script extension adds a "Copy to Clipboard" button next to every event in the SWC event viewer. This enables easier copying to a spreadsheet, without having to interact with an API.
 
 # How to install
+* You need to have Tampermonkey installed to use this userscript, for more information on installing Tampermonkey, [go here](https://www.tampermonkey.net/).
+
+## Automatic
+* Go to https://greasyfork.org/en/scripts/457041-swc-events-clipboard and click `Install`.
 
 ## Manually
-* You need to have Tampermonkey installed to use this userscript, for more information on installing Tampermonkey, [go here](https://www.tampermonkey.net/).
 * Go to the `main.js` file next to the `README.md` file and click on the button in the top right saying `RAW`. Copy the url. (https://raw.githubusercontent.com/code-syl/swc-site-extensions/main/swc-events-clipboard/main.js)
 * Click on the Tampermonkey extension and select `Dashboard`.
 * Click on the `Utilities` tab.
