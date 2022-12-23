@@ -26,7 +26,7 @@
             padding-top: 0 !important;
         }`;
 
-    let styleSheet = document.createElement("style");
+    let styleSheet = document.createElement('style');
     styleSheet.innerText = styles;
     document.head.appendChild(styleSheet);
 
