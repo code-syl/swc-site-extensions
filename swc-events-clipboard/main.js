@@ -7,6 +7,7 @@
 // @match        https://www.swcombine.com/members/events/index.php?mode=*
 // @icon         https://www.swcombine.com/favicon.ico
 // @grant        none
+// @license      MIT
 // ==/UserScript==
 
 (function() {
