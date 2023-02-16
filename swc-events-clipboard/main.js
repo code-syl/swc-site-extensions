@@ -1,14 +1,16 @@
 // ==UserScript==
 // @name         SWC Events Clipboard
 // @namespace    https://www.swcombine.com/
-// @version      1.0
-// @description  Adds a "Copy" button to the SWC Events page, which adds the event details to the clipboard.
+// @version      1.1
+// @description  Adds an "Copy" button to the SWC Events page, which adds the event details to the clipboard.
 // @author       code-syl
 // @match        https://www.swcombine.com/members/events/index.php?mode=*
 // @icon         https://www.swcombine.com/favicon.ico
 // @grant        none
 // @license      MIT
+// @require      https://greasyfork.org/scripts/383527-wait-for-key-elements/code/Wait_for_key_elements.js?version=701631
 // ==/UserScript==
+/* @require      https://code.jquery.com/jquery-3.6.3.min.js /* <-- enable when not using waitForKeyElements.js */
 
 (function() {
     'use strict';
@@ -27,35 +29,29 @@
             padding-top: 0 !important;
         }`;
 
-    let styleSheet = document.createElement('style');
+    let styleSheet = document.createElement("style");
     styleSheet.innerText = styles;
     document.head.appendChild(styleSheet);
 
-    const onCopyClick = (event) => {
-        const swcDateTime = event.querySelector('.eventdate').textContent;
-        const eventText = event.querySelector('.eventtext').textContent.replace(/<(.|\n)*?>/g, '');
+    const onCopyClick = (jNode) => {
+        const swcDateTime = jNode.find('.eventdate')[0].outerText;
+        const eventText = jNode.find('.eventtext')[0].outerText;
 
         navigator.clipboard.writeText(swcDateTime + ' ' + eventText)
             .then(() => { console.info('Copied event details to clipboard.'); })
             .catch(error => { console.error('Failed to copy event details to clipboard: ', error); });
     };
 
-    const onLoad = () => {
-        const events = document.querySelectorAll('.eventmsg');
-        
-        events.forEach(event => {
-            let button = document.createElement('button');
+    const addCopyButton = (jNode) => {
+        let button = document.createElement('button');
             button.id = 'alani-copy';
             button.textContent = 'Copy';
             button.style.height = '2rem';
-            button.addEventListener('click', () => onCopyClick(event));
+            button.addEventListener('click', () => onCopyClick(jNode));
 
-            const parentNode = event.querySelector('.eventpriv').parentNode;
-            const sp2 = event.querySelector('.eventpriv');
-            parentNode.insertBefore(button, sp2);
-        });
-    };
+        jNode.find('.eventpriv')
+             .before(button);
+    }
 
-    window.addEventListener('load', onLoad, false);
-    
+    waitForKeyElements('.eventmsg', addCopyButton);
 })();
