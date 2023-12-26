@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         SWC Events Clipboard
 // @namespace    https://www.swcombine.com/
-// @version      1.1
+// @version      1.2
 // @description  Adds an "Copy" button to the SWC Events page, which adds the event details to the clipboard.
 // @author       code-syl
-// @match        https://www.swcombine.com/members/events/index.php?mode=*
+// @match        https://www.swcombine.com/members/events/index.php*
 // @icon         https://www.swcombine.com/favicon.ico
 // @grant        none
 // @license      MIT
