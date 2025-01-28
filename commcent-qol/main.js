@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         COMMCENT QoL Changes
 // @namespace    https://commcent.swc-empire.com/
-// @version      1.0
+// @version      1.1
 // @description  Adds quality of life changes to the Galactic Empire's COMMCENT forum. Changes include but are not limited to color changes, font changes, and layout changes. This script is not affiliated with the Galactic Empire, LucasArts, or SWCombine. Use at your own risk.
 // @author       code-syl
 // @match        https://commcent.swc-empire.com/*
@@ -20,11 +20,11 @@
             }
             
             div.postbody div div.content {
-                color: #ffffff;
+                color: #ffffff !important;
             }
 
             div.postbody div div.signature {
-                color: #c9c9c9;
+                color: #c9c9c9 !important;
             }
     `;
 
