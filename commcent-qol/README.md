@@ -7,7 +7,7 @@ This user script extension adds some quality of life changes to the Galactic Emp
 * You need to have Tampermonkey installed to use this userscript, for more information on installing Tampermonkey, [go here](https://www.tampermonkey.net/).
 
 ## Automatic
-* Go to https://greasyfork.org/en/scripts/457041-swc-events-clipboard and click `Install`.
+* Go to [https://greasyfork.org/en/scripts/457041-swc-events-clipboard](https://greasyfork.org/en/scripts/525178-commcent-qol-changes) and click `Install`.
 
 ## Manually
 * Go to the `main.js` file next to the `README.md` file and click on the button in the top right saying `RAW`. Copy the url. (https://raw.githubusercontent.com/code-syl/swc-site-extensions/main/commcent-qol/main.js)
