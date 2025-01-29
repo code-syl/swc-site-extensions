@@ -1,4 +1,4 @@
-# Events Clipboard
+# COMMCENT QoL
 <small><i>Made by code-syl (IGN <a href="https://www.swcombine.com/profiles/index.php?c=1&tHand=Alani+Myrtel">Alani Myrtel</a>).</i></small>
 
 This user script extension adds some quality of life changes to the Galactic Empire's COMMCENT system
